@@ -25,7 +25,7 @@ public class WordleDictionaryLoader {
     public WordleDictionary load(Path path, PrintWriter log) {
         log.println("Импорт слов из файла " + path.toAbsolutePath());
         List<String> lines = new ArrayList<>();
-        try(BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
+        try (BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
             String line;
             while ((line = reader.readLine()) != null) {
                 if (!line.isBlank())
